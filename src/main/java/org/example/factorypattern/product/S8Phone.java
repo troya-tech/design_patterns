@@ -1,4 +1,6 @@
-package org.example.factorypattern;
+package org.example.factorypattern.product;
+
+import org.example.factorypattern.product.Phone;
 
 public class S8Phone implements Phone {
 

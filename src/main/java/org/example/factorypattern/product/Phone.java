@@ -1,4 +1,4 @@
-package org.example.factorypattern;
+package org.example.factorypattern.product;
 
 public interface Phone {
 

@@ -1,4 +1,7 @@
-package org.example.factorypattern;
+package org.example.factorypattern.factory;
+
+import org.example.factorypattern.product.Phone;
+import org.example.factorypattern.product.S8Phone;
 
 public class S8PhoneFactory implements PhoneFactory {
     @Override

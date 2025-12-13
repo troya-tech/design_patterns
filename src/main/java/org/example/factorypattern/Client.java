@@ -1,5 +1,9 @@
 package org.example.factorypattern;
 
+import org.example.factorypattern.factory.PhoneFactory;
+import org.example.factorypattern.factory.S8PhoneFactory;
+import org.example.factorypattern.product.Phone;
+
 public class Client {
 
     public static void main(String[] args){
