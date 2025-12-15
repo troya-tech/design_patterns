@@ -1,9 +1,24 @@
 package org.example.knapsack;
 
-public class Client {
+public class Client1 {
 
     private static int knapsack(int W, int[] v, int[] w) {
-       return 0;
+//       return 0;
+        return helper1(W,  v,  w, w.length);
+    }
+
+    private static int helper1(int W, int[] v, int[] w, int n){
+        // base case
+        if(n<=0) return 0;
+
+        // limit case // pointer move next
+        if(w[n-1] > W) return helper1(W, v, w, n-1);
+
+        // recursive - decison case
+        return Math.max(
+                helper1(W, v, w, n-1), // exclude decision
+                v[n-1] + helper1(W - w[n - 1],v, w, n-1) // include decision
+        );
     }
 
     public static void main(String[] args) {
