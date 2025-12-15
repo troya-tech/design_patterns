@@ -14,7 +14,7 @@ public class Client1 {
         // limit case // pointer move next
         if(w[n-1] > W) return helper1(W, v, w, n-1);
 
-        // recursive - decison case
+        // recursive - decision case
         return Math.max(
                 helper1(W, v, w, n-1), // exclude decision
                 v[n-1] + helper1(W - w[n - 1],v, w, n-1) // include decision
