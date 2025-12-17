@@ -6,12 +6,12 @@ public class Client1 {
 
     public static void main(String[] args) {
         // constraints: 0 <= n <= 30
-        System.out.println("fib(0): " + fib(0));
-        System.out.println("fib(1): " + fib(1));
-        System.out.println("fib(5): " + fib(5));
-        System.out.println("fib(30): " + fib(30));
-        // out of constraints
-        System.out.println("fib(40): " + fib(40));
+        System.out.println("fib(0): " + fib(0)); // 0
+        System.out.println("fib(1): " + fib(1)); // 1
+        System.out.println("fib(10): " + fib(10)); //55
+        System.out.println("fib(30): " + fib(30)); //832040
+        // out of constraints //int overflow
+        System.out.println("fib(47): " + fib(47));
     }
 
     public static int fib(int n) {
