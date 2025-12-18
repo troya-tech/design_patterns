@@ -2,7 +2,8 @@ package org.example.singleton2;
 
 public class Singleton {
 
-    private static Singleton instance;
+//    private static Singleton instance;
+    private static volatile Singleton instance;
 
     private Singleton() {
         System.out.println("ben olusuyorum.");
