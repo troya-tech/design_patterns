@@ -5,37 +5,9 @@ import java.util.Arrays;
 public class Client {
 
     private static int knapsack(int W, int[] v, int[] w) {
-//       return 0;
-        int n  = v.length;
-        int[][] memo = new int[n +1][W+1];
-        for(int i =0;i<n+1;i++){
-            Arrays.fill(memo[i],-1);
-        }
-        return helper(W, v, w,v.length, memo);
+       return 0;
     }
 
-    private static int helper(int W, int[] v, int[] w, int n, int[][]memo){
-       //base case n <=0 || W <= 0, return 0
-        if (n<=0 || W <=0) return 0;
-
-        // memo case
-        if(memo[n][W] != -1 ) return memo[n][W];
-
-
-       // limit case w[n-1] > W, next
-        if(w[n-1] > W){
-          memo[n][W] = helper(W, v, w, n-1, memo);
-          return memo[n][W];
-        }
-
-       // recursive - decision case
-       memo[n][W] =  Math.max(
-               helper(W, v, w, n-1, memo),
-              v[n-1]  + helper(W-w[n-1],v, w, n-1, memo)
-       );
-
-       return memo[n][W];
-    }
 
     public static void main(String[] args) {
         int W = 10;
