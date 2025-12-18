@@ -9,7 +9,7 @@ public class Client1 {
 
     private static int helper1(int W, int[] v, int[] w, int n){
         // base case
-        if (n<=0 || W <=0) return 0;
+        if (W == 0 || n == 0) return 0;
 
         // limit case // pointer move next
         if(w[n-1] > W) return helper1(W, v, w, n-1);
