@@ -43,7 +43,7 @@ public class Client2 {
         // Build solution bottom-up
         for (int a = 1; a <= amount; a++) {
             for (int c : coins) {
-                if (a - c >= 0) {
+                if (a - c >= 0) { // if koymazsak ArrayIndexOutOfBoundsException : Index -1 out of bounds for length 12
                     // dp[a] suanki deger, 1(secme bedeli)+dp[a-c] para secildikten sonra deger
                     dp[a] = Math.min(dp[a], 1 + dp[a - c]);
                     // yani dp[a] nin suanki degeri mi daha kucuk yoksa para secmenin bir faydasi oldu mu.
