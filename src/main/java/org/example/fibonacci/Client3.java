@@ -21,6 +21,7 @@ public class Client3 {
         if(n<=1) return n;
 
         // bottom up
+        // 0 1 1 2 3 5 8
         int l = 0; // fib(n-2)
         int r = 1; // fib(n-1)
         for(int i = 2; i<n+1;i++){

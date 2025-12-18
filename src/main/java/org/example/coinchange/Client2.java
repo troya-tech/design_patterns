@@ -34,8 +34,8 @@ public class Client2 {
         // cunku sifir da bastavar. int[3], 0, 1, 2. int[4], 0,1,2,3. boylelikle dp[3] icin de deger okumasi yapalir
 
         // Fill with "infinity" (unreachable state)
-        // Arrays.fill(dp, amount+1);
-        Arrays.fill(dp, Integer.MAX_VALUE);
+         Arrays.fill(dp, amount+1);
+//        Arrays.fill(dp, Integer.MAX_VALUE);
 
         // Base case dp[0] = 0
         dp[0] = 0;
