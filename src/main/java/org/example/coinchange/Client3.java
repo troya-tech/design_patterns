@@ -7,40 +7,51 @@ public class Client3 {
     public static void main(String[] args) {
         Client3 solution = new Client3();
 
-        System.out.println(solution.coinChange(new int[]{1, 2, 5}, 11)); // 3
-        System.out.println(solution.coinChange(new int[]{2}, 3));        // -1
-        System.out.println(solution.coinChange(new int[]{1}, 0));        // 0
+        // Example 1
+        int[] coins1 = {1, 2, 5};
+        int amount1 = 11;
+        System.out.println(solution.coinChange(coins1, amount1));
+        // Expected: 3  (5 + 5 + 1)
+
+        // Example 2
+        int[] coins2 = {2};
+        int amount2 = 3;
+        System.out.println(solution.coinChange(coins2, amount2));
+        // Expected: -1 (cannot make 3)
+
+        // Example 3
+        int[] coins3 = {1};
+        int amount3 = 0;
+        System.out.println(solution.coinChange(coins3, amount3));
+        // Expected: 0
     }
 
     public int coinChange(int[] coins, int amount) {
-        // memo[rem] = rem amount için min coin sayısı
-        // -2: unknown (hesaplanmadı)
-        // -1: impossible
-        int[] memo = new int[amount + 1];
-        Arrays.fill(memo, -2);
 
-        return dfs(coins, amount, memo);
-    }
+        // dp[a] = minimum coins needed to make amount 'a'
+        int[] dp = new int[amount + 1];
+        // mesela amout = 3 ise bizim 4 tane alan olusturmamiz lazim memoride
+        // cunku sifir da bastavar. int[3], 0, 1, 2. int[4], 0,1,2,3. boylelikle dp[3] icin de deger okumasi yapalir
 
-    private int dfs(int[] coins, int rem, int[] memo) {
-        // base cases
-        if (rem == 0) return 0;
-        if (rem < 0) return -1;
+        // Fill with "infinity" (unreachable state)
+         Arrays.fill(dp, amount+1);
+//        Arrays.fill(dp, Integer.MAX_VALUE);
 
-        // memo hit
-        if (memo[rem] != -2) return memo[rem];
+        // Base case dp[0] = 0
+        dp[0] = 0;
 
-        int best = Integer.MAX_VALUE;
-
-        // try each coin
-        for (int c : coins) {
-            int sub = dfs(coins, rem - c, memo);
-            if (sub == -1) continue; // impossible path
-            best = Math.min(best, sub + 1);
+        // Build solution bottom-up
+        for (int a = 1; a <= amount; a++) {
+            for (int c : coins) {
+                if (a - c >= 0) { // if koymazsak ArrayIndexOutOfBoundsException : Index -1 out of bounds for length 12
+                    // dp[a] suanki deger, 1(secme bedeli)+dp[a-c] para secildikten sonra deger
+                    dp[a] = Math.min(dp[a], 1 + dp[a - c]);
+                    // yani dp[a] nin suanki degeri mi daha kucuk yoksa para secmenin bir faydasi oldu mu.
+                }
+            }
         }
 
-        // store result
-        memo[rem] = (best == Integer.MAX_VALUE) ? -1 : best;
-        return memo[rem];
+        // If dp[amount] is still "infinity", no solution
+        return dp[amount] != amount + 1 ? dp[amount] : -1;
     }
 }
