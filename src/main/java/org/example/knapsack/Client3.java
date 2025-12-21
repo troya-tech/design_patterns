@@ -13,18 +13,18 @@ public class Client3 {
         // dp[0][*] = 0
         // dp[*][0] = 0
 
-        for (int i = 1; i <= n; i++) {
-            for (int cap = 1; cap <= W; cap++) {
+        for (int i = 1; i < n+1; i++) {
+            for (int j = 1; j < W+1; j++) {
 
                 // item index = i-1
-                if (w[i - 1] > cap) {
+                if (w[i - 1] > j) {
                     // item sığmıyor → alma
-                    dp[i][cap] = dp[i - 1][cap];
+                    dp[i][j] = dp[i - 1][j];
                 } else {
                     // decision: al vs alma
-                    dp[i][cap] = Math.max(
-                            dp[i - 1][cap],                          // alma
-                            v[i - 1] + dp[i - 1][cap - w[i - 1]]     // al
+                    dp[i][j] = Math.max(
+                            dp[i - 1][j],                          // alma
+                            v[i - 1] + dp[i - 1][j - w[i - 1]]     // al
                     );
                 }
             }
