@@ -1,5 +1,8 @@
-package org.example.strategypattern;
+package org.example.strategypatternwithspringboot;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class CardPaymentStrategyImpl implements PaymentStrategy{
     @Override
     public void pay() {
