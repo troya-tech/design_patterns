@@ -1,5 +1,6 @@
 package org.example.observable;
 
-public interface Observer {
+public interface Consumer {
     void update(Observable observable);
 }
+

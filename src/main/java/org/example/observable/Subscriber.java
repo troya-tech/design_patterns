@@ -1,6 +1,6 @@
 package org.example.observable;
 
-public class Subscriber implements Observer{
+public class Subscriber implements Consumer{
 
     private String name;
 
