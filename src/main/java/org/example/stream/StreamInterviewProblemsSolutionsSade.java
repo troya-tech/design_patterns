@@ -1,16 +1,13 @@
 package org.example.stream;
 
-import org.example.stream.model.Employee;
-import org.example.stream.model.LineItem;
-import org.example.stream.model.Order;
-import org.example.stream.model.Person;
+import org.example.stream.model.*;
 
 import java.util.*;
 import java.util.stream.IntStream;
 
 // link: https://chatgpt.com/g/g-p-693c8494a80881918a2271a1b4eb33e4-interview/c/694aaa93-3b58-832f-9c7b-6099b97b0f16
 
-public class StreamInterviewProblems {
+public class StreamInterviewProblemsSolutionsSade {
 
     /* =========================
        EASY (1–10)
@@ -18,27 +15,45 @@ public class StreamInterviewProblems {
 
     // 1
     public static List<String> adultNames(List<Person> people) {
-        throw new UnsupportedOperationException();
+//        throw new UnsupportedOperationException();
+        return people.stream()
+                .filter(p->p.age() >= 18)
+                .map(Person::name)
+                .toList();
     }
 
     // 2
     public static List<String> normalize(List<String> input) {
-        throw new UnsupportedOperationException();
+//        throw new UnsupportedOperationException();
+        return input.stream()
+                .map(String::trim)
+                .filter(s -> !s.isEmpty())
+                .map(String::toUpperCase)
+                .toList();
     }
 
     // 3
     public static long countPrefix(List<String> words, String prefix) {
-        throw new UnsupportedOperationException();
+//        throw new UnsupportedOperationException();
+        return words.stream()
+                .filter(w-> w.startsWith(prefix))
+                .count();
     }
 
     // 4
     public static int sumSquares(List<Integer> nums) {
-        throw new UnsupportedOperationException();
+//        throw new UnsupportedOperationException();
+        return nums.stream()
+                .mapToInt(s-> s*s)
+                .sum();
     }
 
     // 5
     public static Optional<Integer> firstEven(List<Integer> nums) {
-        throw new UnsupportedOperationException();
+//        throw new UnsupportedOperationException();
+        return nums.stream()
+                .filter(n-> n%2==0)
+                .findFirst();
     }
 
     // 6
