@@ -5,6 +5,8 @@ import org.example.stream.model.*;
 import java.util.*;
 import java.util.stream.IntStream;
 
+// link: https://chatgpt.com/g/g-p-693c8494a80881918a2271a1b4eb33e4-interview/c/694aaa93-3b58-832f-9c7b-6099b97b0f16
+
 public class StreamInterviewProblems {
 
     /* =========================
