@@ -1,4 +1,4 @@
-package org.example.stream.model;
+package org.example.statepattern.stream.model;
 
 
 

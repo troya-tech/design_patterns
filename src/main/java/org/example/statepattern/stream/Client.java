@@ -1,4 +1,4 @@
-package org.example.stream;
+package org.example.statepattern.stream;
 
 import java.util.List;
 

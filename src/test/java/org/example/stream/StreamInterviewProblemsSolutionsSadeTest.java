@@ -1,9 +1,10 @@
 package org.example.stream;
 
-import org.example.stream.model.Employee;
-import org.example.stream.model.LineItem;
-import org.example.stream.model.Order;
-import org.example.stream.model.Person;
+import org.example.statepattern.stream.StreamInterviewProblemsSolutionsSade;
+import org.example.statepattern.stream.model.Employee;
+import org.example.statepattern.stream.model.LineItem;
+import org.example.statepattern.stream.model.Order;
+import org.example.statepattern.stream.model.Person;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;

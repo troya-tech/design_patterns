@@ -1,6 +1,10 @@
-package org.example.stream;
+package org.example.statepattern.stream;
 
-import org.example.stream.model.*;
+import org.example.statepattern.stream.model.Employee;
+import org.example.statepattern.stream.model.LineItem;
+import org.example.statepattern.stream.model.Order;
+import org.example.statepattern.stream.model.Person;
+
 
 import java.util.*;
 import java.util.function.Function;
