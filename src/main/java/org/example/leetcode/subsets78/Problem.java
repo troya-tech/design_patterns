@@ -3,7 +3,7 @@ package org.example.leetcode.subsets78;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Client {
+public class Problem {
     public static void main(String[] args) {
 
     }
