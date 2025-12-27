@@ -1,4 +1,4 @@
-package org.example.coinchange;
+package com.leetcode.coinchange;
 
 public class Client {
 

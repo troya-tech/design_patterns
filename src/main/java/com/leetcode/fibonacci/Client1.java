@@ -1,4 +1,4 @@
-package org.example.fibonacci;
+package com.leetcode.fibonacci;
 
 public class Client1 {
 

@@ -1,9 +1,9 @@
-package org.example.leetcode.subsets78;
+package com.leetcode.subsets78;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Problem {
+public class Solution {
     public static void main(String[] args) {
 
     }

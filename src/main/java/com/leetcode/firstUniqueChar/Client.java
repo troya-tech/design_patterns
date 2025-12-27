@@ -1,4 +1,4 @@
-package org.example.firstUniqueChar;
+package com.leetcode.firstUniqueChar;
 
 public class Client {
 

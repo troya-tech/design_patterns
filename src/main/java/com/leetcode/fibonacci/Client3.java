@@ -1,6 +1,6 @@
-package org.example.fibonacci;
+package com.leetcode.fibonacci;
 
-public class Client4 {
+public class Client3 {
 
     public static void main(String[] args) {
         System.out.println(fib(0));
@@ -16,17 +16,17 @@ public class Client4 {
         //error case
 
         //base case
-        if(n<=1) return n;
+        if (n <= 1) return n;
 
-        // bottom up
+        // dp (tabulation)
+        int[] dp = new int[n + 1];
+
         // 0 1 1 2 3 5 8
-        int l = 0; // fib(n-2)
-        int r = 1; // fib(n-1)
-        for(int i = 2; i<n+1;i++){
-            int cur = l + r; // compute
-            l = r;
-            r = cur;
+        dp[0] = 0; // fib(n-2)
+        dp[1] = 1; // fib(n-1)
+        for (int i = 2; i < n + 1; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2];
         }
-        return r;
+        return dp[n];
     }
 }

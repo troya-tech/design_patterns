@@ -1,4 +1,4 @@
-package org.example.knapsack;
+package com.leetcode.knapsack;
 
 public class Client3 {
 
