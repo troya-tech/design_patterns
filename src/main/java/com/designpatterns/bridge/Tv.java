@@ -1,4 +1,4 @@
-package com.designpatterns.bridge2;
+package com.designpatterns.bridge;
 
 
 public class Tv implements Device {

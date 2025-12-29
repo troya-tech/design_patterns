@@ -1,15 +1,22 @@
 package com.designpatterns.bridge;
 
+
 public class Client {
     public static void main(String[] args) {
+        testDevice(new Tv());
+        testDevice(new Radio());
+    }
 
-        Logger appConsoleLogger =
-                new AppLogger(new ConsoleOutput());
+    public static void testDevice(Device device) {
+        System.out.println("Tests with basic remote.");
+        BasicRemote basicRemote = new BasicRemote(device);
+        basicRemote.power();
+        device.printStatus();
 
-        Logger auditFileLogger =
-                new AuditLogger(new FileOutput());
-
-        appConsoleLogger.log("Application started");
-        auditFileLogger.log("User logged in");
+        System.out.println("Tests with advanced remote.");
+        AdvancedRemote advancedRemote = new AdvancedRemote(device);
+        advancedRemote.power();
+        advancedRemote.mute();
+        device.printStatus();
     }
 }
