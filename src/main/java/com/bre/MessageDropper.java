@@ -7,8 +7,7 @@ public class MessageDropper {
         this.dropped =false;
     }
 
-    @BreField(label = "isDropped", mutability = Mutability.READONLY,
-            description = "Get the message from future procesjsing")
+    //@BreField(label = "isDropped", mutability = Mutability.READONLY, description = "Get the message from future procesjsing")
     public Boolean isDropped(){
         return this.dropped;
     }

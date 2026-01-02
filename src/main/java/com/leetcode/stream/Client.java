@@ -1,4 +1,4 @@
-package com.designpatterns.statepattern.stream;
+package com.leetcode.stream;
 
 import java.util.List;
 

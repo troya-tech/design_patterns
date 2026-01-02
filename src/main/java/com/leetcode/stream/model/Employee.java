@@ -1,4 +1,4 @@
-package com.designpatterns.statepattern.stream.model;
+package com.leetcode.stream.model;
 
 
 
