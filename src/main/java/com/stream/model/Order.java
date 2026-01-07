@@ -1,4 +1,4 @@
-package com.leetcode.stream.model;
+package com.stream.model;
 
 
 

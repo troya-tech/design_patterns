@@ -1,17 +1,16 @@
-package com.leetcode.stream;
+package com.stream;
 
-import com.leetcode.stream.model.Employee;
-import com.leetcode.stream.model.LineItem;
-import com.leetcode.stream.model.Order;
-import com.leetcode.stream.model.Person;
-
+import com.stream.model.Employee;
+import com.stream.model.LineItem;
+import com.stream.model.Order;
+import com.stream.model.Person;
 
 import java.util.*;
 import java.util.stream.IntStream;
 
 // link: https://chatgpt.com/g/g-p-693c8494a80881918a2271a1b4eb33e4-interview/c/694aaa93-3b58-832f-9c7b-6099b97b0f16
 
-public class StreamInterviewProblemsSolutionsSade {
+public class StreamInterviewProblems {
 
     /* =========================
        EASY (1–10)
@@ -19,45 +18,27 @@ public class StreamInterviewProblemsSolutionsSade {
 
     // 1
     public static List<String> adultNames(List<Person> people) {
-//        throw new UnsupportedOperationException();
-        return people.stream()
-                .filter(p->p.age() >= 18)
-                .map(Person::name)
-                .toList();
+        throw new UnsupportedOperationException();
     }
 
     // 2
     public static List<String> normalize(List<String> input) {
-//        throw new UnsupportedOperationException();
-        return input.stream()
-                .map(String::trim)
-                .filter(s -> !s.isEmpty())
-                .map(String::toUpperCase)
-                .toList();
+        throw new UnsupportedOperationException();
     }
 
     // 3
     public static long countPrefix(List<String> words, String prefix) {
-//        throw new UnsupportedOperationException();
-        return words.stream()
-                .filter(w-> w.startsWith(prefix))
-                .count();
+        throw new UnsupportedOperationException();
     }
 
     // 4
     public static int sumSquares(List<Integer> nums) {
-//        throw new UnsupportedOperationException();
-        return nums.stream()
-                .mapToInt(s-> s*s)
-                .sum();
+        throw new UnsupportedOperationException();
     }
 
     // 5
     public static Optional<Integer> firstEven(List<Integer> nums) {
-//        throw new UnsupportedOperationException();
-        return nums.stream()
-                .filter(n-> n%2==0)
-                .findFirst();
+        throw new UnsupportedOperationException();
     }
 
     // 6

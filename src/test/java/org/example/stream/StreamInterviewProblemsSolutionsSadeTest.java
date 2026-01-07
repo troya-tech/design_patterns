@@ -1,10 +1,10 @@
 package org.example.stream;
 
-import com.leetcode.stream.StreamInterviewProblemsSolutionsSade;
-import com.leetcode.stream.model.Employee;
-import com.leetcode.stream.model.LineItem;
-import com.leetcode.stream.model.Order;
-import com.leetcode.stream.model.Person;
+import com.stream.StreamInterviewProblemsSolutionsSade;
+import com.stream.model.Employee;
+import com.stream.model.LineItem;
+import com.stream.model.Order;
+import com.stream.model.Person;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;

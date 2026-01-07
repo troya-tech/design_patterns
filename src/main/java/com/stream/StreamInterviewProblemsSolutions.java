@@ -1,9 +1,9 @@
-package com.leetcode.stream;
+package com.stream;
 
-import com.leetcode.stream.model.Employee;
-import com.leetcode.stream.model.LineItem;
-import com.leetcode.stream.model.Order;
-import com.leetcode.stream.model.Person;
+import com.stream.model.Employee;
+import com.stream.model.LineItem;
+import com.stream.model.Order;
+import com.stream.model.Person;
 
 
 import java.util.*;

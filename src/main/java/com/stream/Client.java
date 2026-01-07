@@ -1,4 +1,4 @@
-package com.leetcode.stream;
+package com.stream;
 
 import java.util.List;
 
