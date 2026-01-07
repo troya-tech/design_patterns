@@ -1,4 +1,4 @@
-package com.designpatterns.adapter.v2;
+package com.designpatterns.adapter;
 
 public class OldXmlLogger {
 

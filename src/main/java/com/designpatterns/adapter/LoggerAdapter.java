@@ -1,7 +1,7 @@
-package com.designpatterns.adapter.v2;
+package com.designpatterns.adapter;
 
 public class LoggerAdapter implements Logger{
-    OldXmlLogger oldLogger;
+    private OldXmlLogger oldLogger;
 
     public LoggerAdapter(OldXmlLogger logger){
         oldLogger = logger;
