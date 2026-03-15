@@ -2,6 +2,8 @@ package com.leetcode.coinchange;
 
 import java.util.Arrays;
 
+// 2 ve 3 cozumunu kiyasi: https://chatgpt.com/g/g-p-693c8494a80881918a2271a1b4eb33e4-interview/c/69b488c8-7290-838b-98e7-df60c7be6eb1
+// formul https://chatgpt.com/c/69b478d6-7c88-8387-9b42-a44c1340bf35
 public class Client2 {
 
     public static void main(String[] args) {
