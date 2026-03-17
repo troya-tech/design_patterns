@@ -20,9 +20,11 @@ class Solution1 {
     }
 
     private int helper(int n) {
+        // base case
         if (n == 0) return 1;
         if (n < 0) return 0;
 
+        // rec case
         return helper(n - 1) + helper(n - 2);
     }
 }
